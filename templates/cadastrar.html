@@ -1,0 +1,58 @@
+<html>
+
+    <header>
+        <h1>Cadastrar</h1>
+        <meta charset="utf8">
+    </header>
+    <body>
+    <a href="{{ url_for('lista')}}"> Lista de Clientes</a>
+    <hr>
+    <a href="{{ url_for('index')}}"> Home</a>
+
+        <form action="/cadastrar" method="POST">
+        <table border="3">
+            <tr>
+                <td><h3>Pessoa</h3></td>
+            </tr>
+            <tr>
+                <td>Nome :</td>
+                <td><input name="nome" type="text"></td>
+            </tr>
+            <tr>
+                <td>Data de nascimento :</td>
+                <td><input name="data_de_nascimento" type="date"></td>
+            </tr>
+            <tr>
+                <td>Rua :</td>
+                <td><input name="rua" type="text"></td>
+            </tr>
+            <tr>
+                <td>Numero :</td>
+                <td><input name="numero" type="text"></td>
+            </tr>
+            <tr>
+                <td>Tipo endereco :</td>
+                <td><input name="tipo_end" type="text"></td>
+            </tr>
+            <tr>
+                <td>Cep :</td>
+                <td><input name="cep" type="text"></td>
+            </tr>
+            <tr>
+                <td>Tipo telefone :</td>
+                <td><input name="tipo_tel" type="text"></td>
+            </tr>
+            <tr>
+                <td>Numero telefone :</td>
+                <td><input name="numero_tel" type="text"></td>
+            </tr>
+            <tr>
+                <td><input value="Cadastrar" type="submit"></td>
+            </tr>
+
+        </table>
+        </form>
+    </body>
+
+</html>
+

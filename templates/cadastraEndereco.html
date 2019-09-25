@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastra Endereco</title>
+</head>
+<body>
+    <a href="{{ url_for('index')}}"> Home</a>
+    <h3>Cadastrar Novo Endereco</h3>
+    <form action="/cadastrarEndereco/{{id}}" method="post">
+    <table border="3">
+            <tr>
+                <td>Rua :</td>
+                <td><input name="rua" type="text"></td>
+            </tr>
+            <tr>
+                <td>Numero :</td>
+                <td><input name="numero" type="text"></td>
+            </tr>
+            <tr>
+                <td>Tipo endereco :</td>
+                <td><input name="tipo_end" type="text"></td>
+            </tr>
+            <tr>
+                <td>Cep :</td>
+                <td><input name="cep" type="text"></td>
+            </tr>
+            <tr>
+                <td>pessoa_id :</td>
+                <td><input name="pessoa_id" type="text" value="{{ id }}"></td>
+            </tr>
+            <tr>
+                <td><input value="Gravar" type="submit"></td>
+            </tr>
+
+    </table>
+</form>
+
+</body>
+</html>

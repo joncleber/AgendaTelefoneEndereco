@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualiza Enderecos</title>
+</head>
+<body>
+<a href="{{ url_for('index')}}"> Home</a>
+        <form action="" method="POST">
+        <table border="3">
+            <tr>
+                <td><h3>Atualizar</h3></td>
+            </tr>
+            <tr>
+                <td>Rua :</td>
+                <td><input name="rua" type="text" value="{{ endereco.rua }}"></td>
+            </tr>
+            <tr>
+                <td>Numero :</td>
+                <td><input name="numero" type="text" value="{{ endereco.numero }}"></td>
+            </tr>
+            <tr>
+                <td>Tipo endereco :</td>
+                <td><input name="tipo_end" type="text" value="{{ endereco.tipo_end }}"></td>
+            </tr>
+            <tr>
+                <td>Cep :</td>
+                <td><input name="cep" type="text" value="{{ endereco.cep }}"></td>
+            </tr>
+            <tr>
+                <td><input value="Atualizar" type="submit"></td>
+            </tr>
+        </table>
+        </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endereços</title>
+</head>
+<body>
+<a href="{{ url_for('index')}}"> Home</a>
+    <h1>Lista de Enderecos</h1>
+    <hr>
+    <table border="2">
+        <tr>
+            <td>Id</td>
+            <td>Numero</td>
+            <td>Tipo Endereço</td>
+             <td>Rua</td>
+            <td>CEP</td>
+            <td>Pessoa</td>
+            <td>Excluir</td>
+            <td>Novo</td>
+            <td>Atualizar</td>
+        </tr>
+        {% for endereco in enderecos %}
+        <tr>
+            <td>{{ endereco.id }}</td>
+            <td>{{ endereco.numero }}</td>
+            <td>{{ endereco.tipo_end }}</td>
+            <td>{{ endereco.rua }}</td>
+            <td>{{ endereco.cep }}</td>
+            <td>{{ endereco.pessoa_id }}</td>
+            <td><a href="/excluir/endereco/{{endereco.id}}">Excluir</a> </td>
+            <td><a href="/cadastrarEndereco/{{endereco.pessoa_id}}">Cadastrar Novo</a> </td>
+            <td><a href="/atualizarEndereco/{{endereco.pessoa_id}}">Atualizar</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telefones</title>
+</head>
+<body>
+<a href="{{ url_for('index')}}"> Home</a>
+    <h1>Lista de Telefones</h1>
+    <hr>
+    <table border="2">
+        <tr>
+            <td>Id</td>
+            <td>Numero</td>
+            <td>Tipo Telefone</td>
+            <td>Excluir</td>
+            <td>Novo</td>
+            <td>Atualizar</td>
+        </tr>
+        {% for telefone in telefones %}
+        <tr>
+            <td>{{ telefone.id }}</td>
+            <td>{{ telefone.numero_tel }}</td>
+            <td>{{ telefone.tipo_tel }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

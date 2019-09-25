@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Clientes</title>
+</head>
+<body>
+<a href="{{ url_for('cadastrar')}}"> Cadastrar Clientes</a>
+    <h1>Lista de Clientes</h1>
+    <hr>
+    <table border="2">
+        <tr>
+            <td>Id</td>
+            <td>Nome</td>
+            <td>Data_Nascimento</td>
+            <td>Excluir</td>
+            <td>Atualizar</td>
+        </tr>
+        {% for pessoa in pessoas %}
+        <tr>
+            <td>{{ pessoa.id }}</td>
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.data_nascimento }}</td>
+            <td><a href="/excluir/{{ pessoa.id }}">Excluir</a> </td>
+            <td><a href="/atualizarPessoa/{{ pessoa.id }}">Editar</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
